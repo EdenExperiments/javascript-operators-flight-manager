@@ -12,7 +12,9 @@ function onCalculateNumberOfFlights() {
           " flight(s) to carry " + passengers + " passengers";
     } catch (error) {
         document.getElementById('flights').innerHTML = error; 
-    } 
+    } finally {
+        console.log(`The number of passengers is ${passengers} and the flight capacity is ${capacity}`)
+    }
 }
 
 function onCalculateTotalFinalPrice(object) {
@@ -181,3 +183,5 @@ function onCheckAircraftRevision() {
     }
 
 }
+
+console.log(flights.calculateNumberOfFlights(1500.7, 10))
