@@ -96,7 +96,7 @@ function onCalculatePassengers() {
     let passengers5 = parseInt(document.getElementById("passengers5").value);
 
     let passengersArray = [passengers1, passengers2, passengers3, passengers4, passengers5];
-    calculatedPassengers = Util().calculateTotalNumberOfPassengers(passengersArray);
+    let calculatedPassengers = Util().calculateTotalNumberOfPassengers(passengersArray);
 
     document.getElementById("calculatedPassengers").innerHTML = "Total number of passengers: " + calculatedPassengers;
 
@@ -110,7 +110,7 @@ function onCalculateTotalDistance() {
     let distance5 = parseInt(document.getElementById("distance5").value);
 
     let distancesArray = [distance1, distance2, distance3, distance4, distance5];
-    calculatedTotalDistance = Util().calculateTotalDistance(distancesArray);
+    let calculatedTotalDistance = Util().calculateTotalDistance(distancesArray);
 
     document.getElementById("calculatedTotalDistance").innerHTML = "Total distance: " + calculatedTotalDistance;
 
@@ -139,7 +139,7 @@ function onCalculateBonusPoints() {
     let businessBonus = parseInt(document.getElementById("businessBonus").value);
     let economyBonus = parseInt(document.getElementById("economyBonus").value);
 
-    calculatedBonusPoints = Util().calculateBonusPoints(businessDistancesArray, economyDistancesArray, 
+    let calculatedBonusPoints = Util().calculateBonusPoints(businessDistancesArray, economyDistancesArray, 
                                                               businessBonus, economyBonus);
 
     document.getElementById("calculatedBonusPoints").innerHTML = "Bonus points: " + calculatedBonusPoints;
